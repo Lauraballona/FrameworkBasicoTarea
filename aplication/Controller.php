@@ -11,6 +11,8 @@ abstract class AppController
 	}
 	abstract function index();
 
+	
+
 	protected function loadModel($modelo){
 		$modelo = $modelo."Model";
 		$rutaModelo = ROOT."models".DS.$modelo.".php";

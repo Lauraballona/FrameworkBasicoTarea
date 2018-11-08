@@ -10,12 +10,11 @@
 
             <label for="descripcion">Descripción</label>
             <textarea name="descripcion" class="form-control"></textarea>
-    </div>
+</div>
     <div class="col-sm-6">
 
         <label for="fecha">Fecha</label>
         <input type="date" name="fecha" class="form-control" value="<?php echo date("Y-m-d"); ?>">
-
 
         <label for="prioridad">Prioridad</label>
         <input type="range" name="prioridad" min="0" max="10" class="form-control">
@@ -28,7 +27,11 @@
         </select>
 
         <br>
-        <input type="submit" value="Guardar Tarea">
+
+        <a href="<?php echo APP_URL."tareas/index"; ?>" >
+            <button type="button" class="btn btn-default">Cancelar</button>
+        </a>
+        <input type="submit" class="btn btn-primary" value="Guardar Tarea">
 
         </form>
     </div>

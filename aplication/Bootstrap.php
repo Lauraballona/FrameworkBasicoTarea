@@ -5,12 +5,14 @@ class Bootstrap
     public static function run(Request $peticion){
         $controller = $peticion->getControlador()."Controller";
         $rutaControlador = ROOT."controllers".DS.$controller.".php";
+        //echo $rutaControlador;
         $metodo = $peticion->getMetodo();
         $args = $peticion->getArgs();
 
         if (is_readable($rutaControlador)){
             require_once $rutaControlador;
             $controller = new $controller;
+
 
             if (is_callable(array($controller, $metodo))){
                 $metodo = $peticion->getMetodo();
